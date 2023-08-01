@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Technical_blog"
+  title: "Carson Zhang"
   navbar:
     right:
       - about.qmd
