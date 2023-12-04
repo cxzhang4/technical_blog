@@ -81,9 +81,9 @@ We have:
 $$
 \begin{align}
   F_Y(b) - F_Y(a) &= b - a\\
-    &= F_Y(Y) \Big|_a^b && \text{    (standard antiderivative notation) }\\
-    &= \int_a^b f_Y(y)dy && \text{   (definition of a probability density function)}\\
-    &= \int_a^b 1dy && \text{    (a function with the identity as its antiderivative)}\\
+    &= F_Y(Y) \Big|_a^b && \text{(standard antiderivative notation)}\\
+    &= \int_a^b f_Y(y)dy && \text{(definition of a probability density function)}\\
+    &= \int_a^b 1dy && \text{(a function with the identity as its antiderivative)}\\
 \end{align}
 $$
 
