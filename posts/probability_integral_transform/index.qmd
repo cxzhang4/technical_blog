@@ -19,7 +19,7 @@ x_seq <- seq(0, 1, length = 100)
 x_density <- dbeta(x_seq, alpha_x, beta_x)
 
 plot(x_seq, x_density, type = "l", lty = 1,
-     xlab = "X", ylab = "Density", main = "Unknown density of X")
+     xlab = "X", ylab = "Density", main = "Density of X")
 ```
 
 What does $F_X(x)$ look like?
@@ -37,7 +37,7 @@ Here is the density of $X$.
 
 ```{r echo=FALSE}
 plot(x_seq, x_density, type = "l", lty = 1,
-     xlab = "X", ylab = "Unknown density of X", main = "Density of X")
+     xlab = "X", ylab = "Density", main = "Density of X")
 abline(v = c(quantile_0.97, quantile_1), col = "orange")
 ```
 
@@ -66,7 +66,11 @@ abline(v = c(0.97, 1), col = "orange")
 
 Now, think about the region between the $0.97$ and $0.98$ $p$-quantiles of the sample. By definition, this comprises 1% of the probability mass ($0.98 - 0.97 = 0.01$), so we need to adjust our curve to satisfy this condition.
 
-However, we note that all intervals have this same property (even arbitrarily small intervals). It should be natural to suspect the density of curve of the CDF-transformed sample to be a horizontal line at $1$: this is the only function I can think of that guarantees this property. It feels like this can be proven more formally using real analysis.
+However, we note that all intervals have this same property (even arbitrarily small intervals): **the width of each interval is equal to its corresponding probability mass.** So, the density of $Y$ needs to have mean $1$ over any sub-interval of $[0, 1]$.
+
+It is natural for me to suspect the density of curve of the CDF-transformed sample to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
+
+We define the following lemma and "proof" that a random variable's CDF applied to itself has a standard uniform distribution.
 
 **Lemma:** For all real numbers $a, b$ such that $0 \leq a < b \leq 1$, $F_X(X) \sim \text{Uniform}(0, 1)$.
 
@@ -91,3 +95,19 @@ $$
 
 So, we have $f_Y(y) = 1$, and therefore, $Y = F_X(x)$ has the standard uniform distribution.
 
+## P-value distribution
+
+The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is greater" is
+$P_{H_0}(T \geq t(x))$.
+
+We can write
+
+$$
+\begin{align}
+P_{H_0}(T \geq t(x)) &= 1 - P_{H_0}(T \leq t(x))\\
+  &= 1 - F_{T; H_0}(T)\\
+  &= 1 - Y && \text{where } Y \sim U(0, 1)\\
+\end{align}
+$$
+
+And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x) \sim U(0, 1)$.
