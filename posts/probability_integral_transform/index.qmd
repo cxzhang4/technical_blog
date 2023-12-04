@@ -6,7 +6,7 @@ date: "12/04/2023"
 draft: false
 ---
 
-The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. But why does this make sense?
+The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. I suspect that it's also central to why p-values are normally distributed under the null hypothesis. But why does this make sense? Even the existing "intuitive" explanations I have seen are not very convincing.
 
 <!-- I believe this is also why the distribution of p-values is uniform under the null hypothesis. -->
 
