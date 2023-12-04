@@ -1,4 +1,4 @@
 - source: project
   netlify:
-    - id: 7158a59c-f63c-4f31-885f-302ce97e7fe7
-      url: 'https://carsons-technical-blog.netlify.app'
+    - id: "7158a59c-f63c-4f31-885f-302ce97e7fe7"
+      url: "https://carsons-technical-blog.netlify.app"

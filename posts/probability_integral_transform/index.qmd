@@ -8,9 +8,11 @@ draft: false
 
 The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. I suspect that it's also central to why p-values are normally distributed under the null hypothesis. But why does this make sense?
 
-Suppose we have a random sample `x` from some unknown probability distribution.
+Suppose we have a random variable $X$ from an arbitrary probability distribution.
 
-```{r echo=FALSE}
+Here, $X \sim \text{Beta}(\alpha = 0.9, \beta = 3.4)$
+
+```{r}
 alpha_x = 0.9
 beta_x = 3.4
 x_seq <- seq(0, 1, length = 100)
