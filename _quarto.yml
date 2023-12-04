@@ -12,8 +12,7 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: 
-      light: [lumen, theme-light.scss]
+    theme: lumen
     css: styles.css
 
 
