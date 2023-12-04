@@ -8,7 +8,7 @@ draft: false
 
 The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. I suspect that it's also central to why p-values are normally distributed under the null hypothesis. But why does this make sense?
 
-Suppose we have a random sample `x` from some unknown probability distribution. What does $F_X(x)$ look like?
+Suppose we have a random sample `x` from some unknown probability distribution.
 
 ```{r echo=FALSE}
 alpha_x = 0.9
@@ -20,9 +20,11 @@ plot(x_seq, x_density, type = "l", lty = 1,
      xlab = "X", ylab = "Density", main = "Unknown density of X")
 ```
 
+What does $F_X(x)$ look like?
+
 Let's try to draw the density of $Y = F_X(x)$ one section at a time.
 
-First, suppose we select the top 3% of the sample. By definition, this comprises the values between the $0.97$ and $1$ $p$-quantiles of this distribution.
+First, suppose we select the top 3% of the sample. [(This comprises the values between the $0.97$ and $1$ $p$-quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
 
 ```{r echo=FALSE}
 quantile_0.97 <- qbeta(0.97, alpha_x, beta_x)
