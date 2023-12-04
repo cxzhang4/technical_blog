@@ -1,0 +1,27 @@
+# What is Statistics?
+
+This is a collection of various definitions of "statistics" and related terms.
+
+## Statistics
+
+### Chernoff and Moses (1959)
+
+"... statistics is concerned with decision making in the face of uncertainty. Its applicability ranges from almost all inductive sciences to many situations that people face in everyday life when it is not perfectly obvious what they should do."
+
+They go on to describe two types of uncertainty. The first is due to randomness, given that one knows the laws of randomness that apply in a particular situation. The second is due to ignorance of the state of nature, i.e. of those laws of randomness.
+
+## Statistical Inference
+
+### Gelman, Hill, and Vehtari
+
+They equate "statistics" with "statistical inference".
+
+They delineate the three main challenges of statistical inference as follows:
+
+1.  Generalizing from sample to population
+2.  Generalizing from treatment to control group
+3.  Generalizing from observed measurements to the underlying constructs of interest
+
+All three can be thought of as prediction problems.
+
+
