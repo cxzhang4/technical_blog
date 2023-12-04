@@ -57,7 +57,7 @@ cdf_seq_orange <- seq(0.97, 1, by = 0.0001)
 cdf_density_orange <- (1/4) * sin(2 * pi / 0.015 * (cdf_seq_orange - 0.97)) + 1
 
 plot(cdf_seq_orange, cdf_density_orange, type = "l", xlim = c(0, 1), ylim = c(0, 1.5),
-     xlab = "Value of the CDF of X", ylab = "density")
+     main = "The top 3% of the unknown density of Y", xlab = "Value of the CDF of X", ylab = "density")
 abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
 abline(v = c(0.97, 1), col = "orange")
 ```
@@ -72,18 +72,18 @@ However, we note that all intervals have this same property (even arbitrarily sm
 
 Let $a, b$ be real number such that $0 \leq a < b \leq 1$.
 
-By the argument above, we have $F_X(b) - F_X(a) = b - a$.
+By the argument above, we have $F_Y(b) - F_Y(a) = b - a$.
 
-(Note that we can rewrite this as $F(b) = b \text{ and } F(a) = a$, i.e. F is the identity.)
+(Note that we can rewrite this as $F(b) = b \text{ and } F(a) = a$, i.e. $F$ is the identity.)
 
 We have:
 
 $$
 \begin{align}
   F_Y(b) - F_Y(a) &= b - a\\
-    &= F_Y(Y) \Big|_a^b \text{    (standard antiderivative notation) }\\
-    &= \int_a^b f_Y(y)dy \text{   (definition of a probability density function)}\\
-    &= \int_a^b 1dy \text{    (a function with the identity as its antiderivative)}\\
+    &= F_Y(Y) \Big|_a^b && \text{    (standard antiderivative notation) }\\
+    &= \int_a^b f_Y(y)dy && \text{   (definition of a probability density function)}\\
+    &= \int_a^b 1dy && \text{    (a function with the identity as its antiderivative)}\\
 \end{align}
 $$
 
