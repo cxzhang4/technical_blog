@@ -35,7 +35,7 @@ Here is the density of $X$.
 
 ```{r echo=FALSE}
 plot(x_seq, x_density, type = "l", lty = 1,
-     xlab = "X", ylab = "Unknown Density of X", main = "Unknown Density of X")
+     xlab = "X", ylab = "Unknown density of X", main = "Density of X")
 abline(v = c(quantile_0.97, quantile_1), col = "orange")
 ```
 
@@ -46,7 +46,7 @@ cdf_seq <- seq(0, 1, length = 10000)
 
 cdf_arbitrary_guess <- (1/4) * sin(2 * pi * cdf_seq) + 1
 
-plot(cdf_seq, cdf_arbitrary_guess, type = "l", xlab = "Y = F(X)", ylab = "Density", main = "Unknown Density of Y = F(X)")
+plot(cdf_seq, cdf_arbitrary_guess, type = "l", xlab = "Y = F(X)", ylab = "Density", main = "Unknown density of Y = F(X)")
 abline(v = c(0.97, 1), col = "orange")
 ```
 
@@ -57,7 +57,7 @@ cdf_seq_orange <- seq(0.97, 1, by = 0.0001)
 cdf_density_orange <- (1/4) * sin(2 * pi / 0.015 * (cdf_seq_orange - 0.97)) + 1
 
 plot(cdf_seq_orange, cdf_density_orange, type = "l", xlim = c(0, 1), ylim = c(0, 1.5),
-     main = "The top 3% of the unknown density of Y", xlab = "Value of the CDF of X", ylab = "density")
+     main = "The top 3% of the unknown density of Y", xlab = "Value of the CDF of X", ylab = "Density")
 abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
 abline(v = c(0.97, 1), col = "orange")
 ```
