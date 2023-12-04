@@ -1,3 +1,11 @@
+---
+title: "What is Statistics?"
+description: "A collection of definitions."
+author: "Carson Zhang"
+date: "12/04/2023"
+draft: true
+---
+
 # What is Statistics?
 
 This is a collection of various definitions of "statistics" and related terms.
