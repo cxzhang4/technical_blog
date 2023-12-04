@@ -110,4 +110,4 @@ P_{H_0}(T \geq t(x)) &= 1 - P_{H_0}(T \leq t(x))\\
 \end{align}
 $$
 
-And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x) \sim U(0, 1)$.
+And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x)) \sim U(0, 1)$.
