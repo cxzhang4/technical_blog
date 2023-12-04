@@ -184,14 +184,14 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Informal mathematical argument</strong>:</p>
 <p>Let <span class="math inline">\(a, b\)</span> be real number such that <span class="math inline">\(0 \leq a &lt; b \leq 1\)</span>.</p>
 <p>By the argument above, we have <span class="math inline">\(F_Y(b) - F_Y(a) = b - a\)</span>.</p>
-<p>(Note that we can rewrite this as <span class="math inline">\(F(b) = b \text{ and } F(a) = a\)</span>, i.e.&nbsp;F is the identity.)</p>
+<p>(Note that we can rewrite this as <span class="math inline">\(F(b) = b \text{ and } F(a) = a\)</span>, i.e.&nbsp;<span class="math inline">\(F\)</span> is the identity.)</p>
 <p>We have:</p>
 <p><span class="math display">\[
 \begin{align}
   F_Y(b) - F_Y(a) &amp;= b - a\\
-    &amp;= F_Y(Y) \Big|_a^b \text{    (standard antiderivative notation) }\\
-    &amp;= \int_a^b f_Y(y)dy \text{   (definition of a probability density function)}\\
-    &amp;= \int_a^b 1dy \text{    (a function with the identity as its antiderivative)}\\
+    &amp;= F_Y(Y) \Big|_a^b &amp;&amp; \text{    (standard antiderivative notation) }\\
+    &amp;= \int_a^b f_Y(y)dy &amp;&amp; \text{   (definition of a probability density function)}\\
+    &amp;= \int_a^b 1dy &amp;&amp; \text{    (a function with the identity as its antiderivative)}\\
 \end{align}
 \]</span></p>
 <p>So, we have <span class="math inline">\(f_Y(y) = 1\)</span>, and therefore, <span class="math inline">\(Y = F_X(x)\)</span> has the standard uniform distribution.</p>
