@@ -6,9 +6,7 @@ date: "12/04/2023"
 draft: false
 ---
 
-The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. I suspect that it's also central to why p-values are normally distributed under the null hypothesis. But why does this make sense? Even the existing "intuitive" explanations I have seen are not very convincing.
-
-<!-- I believe this is also why the distribution of p-values is uniform under the null hypothesis. -->
+The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. I suspect that it's also central to why p-values are normally distributed under the null hypothesis. But why does this make sense?
 
 Suppose we have a random sample `x` from some unknown probability distribution. What does $F_X(x)$ look like?
 
@@ -62,7 +60,7 @@ abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
 abline(v = c(0.97, 1), col = "orange")
 ```
 
-Now, think about the region between the $0.97$ and $0.98$ p-quantiles of the sample. By definition, this comprises 1% of the probability mass ($0.98 - 0.97 = 0.01$), so we need to adjust our curve to satisfy this condition.
+Now, think about the region between the $0.97$ and $0.98$ $p$-quantiles of the sample. By definition, this comprises 1% of the probability mass ($0.98 - 0.97 = 0.01$), so we need to adjust our curve to satisfy this condition.
 
 However, we note that all intervals have this same property (even arbitrarily small intervals). It should be natural to suspect the density of curve of the CDF-transformed sample to be a horizontal line at $1$: this is the only function I can think of that guarantees this property. It feels like this can be proven more formally using real analysis.
 
