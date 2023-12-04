@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Carson Zhang",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "What is Statistics?\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,12 @@
     "title": "Carson Zhang",
     "section": "",
     "text": "This blog contains:\n\nExplanations of technical concepts that can serve both as references and learning material for beginners.\nOpinions about education and work."
+  },
+  {
+    "objectID": "posts/what_is_statistics/index.html",
+    "href": "posts/what_is_statistics/index.html",
+    "title": "Carson Zhang",
+    "section": "",
+    "text": "This is a collection of various definitions of “statistics” and related terms.\n\n\n\n\n“… statistics is concerned with decision making in the face of uncertainty. Its applicability ranges from almost all inductive sciences to many situations that people face in everyday life when it is not perfectly obvious what they should do.”\nThey go on to describe two types of uncertainty. The first is due to randomness, given that one knows the laws of randomness that apply in a particular situation. The second is due to ignorance of the state of nature, i.e. of those laws of randomness.\n\n\n\n\n\n\nThey equate “statistics” with “statistical inference”.\nThey delineate the three main challenges of statistical inference as follows:\n\nGeneralizing from sample to population\nGeneralizing from treatment to control group\nGeneralizing from observed measurements to the underlying constructs of interest\n\nAll three can be thought of as prediction problems."
   }
 ]

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Carson Zhang">
+<meta name="dcterms.date" content="2023-11-21">
+<meta name="description" content="The probability integral transform states that, for a continuous random variable X, the distribution of F_X(X) is U(0, 1). I discuss why this makes sense.">
 
-<title>Carson Zhang</title>
+<title>Carson Zhang - Intuition for the probability integral transform</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,49 +61,20 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Carson Zhang</span>
     </a>
   </div>
@@ -112,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="../../about.html">
  <span class="menu-text">Carson Zhang</span></a>
   </li>  
   <li class="nav-item compact">
@@ -134,144 +106,99 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Carson Zhang</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Intuition for the probability integral transform</h1>
+                  <div>
+        <div class="description">
+          The probability integral transform states that, for a continuous random variable <span class="math inline">\(X\)</span>, the distribution of <span class="math inline">\(F_X(X)\)</span> is <span class="math inline">\(U(0, 1)\)</span>. I discuss why this makes sense.
+        </div>
+      </div>
+                </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Carson Zhang </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 21, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>The probability integral transform states that, for a continuous random variable <span class="math inline">\(X\)</span>, the distribution of <span class="math inline">\(F_X(X)\)</span> is <span class="math inline">\(U(0, 1)\)</span>. This result underlies inverse transform sampling. I discuss why this makes sense.</p>
+<!-- I believe this is also why the distribution of p-values is uniform under the null hypothesis. -->
+<p>Suppose we have a random sample <code>x</code> from some unknown probability distribution. What does <span class="math inline">\(F_X(x)\)</span> look like?</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Let’s try to draw the density of <span class="math inline">\(Y = F_X(x)\)</span> one section at a time.</p>
+<p>First, suppose we select the top 3% of the sample. By definition, this comprises the values between the <span class="math inline">\(0.97\)</span> and <span class="math inline">\(1\)</span> <span class="math inline">\(p\)</span>-quantiles of this distribution.</p>
+<div class="cell">
+
+</div>
+<p>Here is the density of <span class="math inline">\(X\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>For now, since we don’t know what the density of <span class="math inline">\(Y = F_X(X)\)</span> looks like, let’s say it’s an arbitrary curve.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>However, since we selected the top 3% of the probability mass, we know that, within the orange interval, the area under the curve must be <span class="math inline">\(0.03\)</span>, and therefore the value of the density must be <span class="math inline">\(1\)</span> on average.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Now, think about the region between the <span class="math inline">\(0.97\)</span> and <span class="math inline">\(0.98\)</span> p-quantiles of the sample. By definition, this comprises 1% of the probability mass (<span class="math inline">\(0.98 - 0.97 = 0.01\)</span>), so we need to adjust our guess to satisfy this condition.</p>
+<p>However, we note that all intervals have this same property (even arbitrarily small intervals), and, intuitively, it now makes sense for the density of curve of the CDF-transformed sample to be a horizontal line at <span class="math inline">\(1\)</span>: this is the only function I can think of that guarantees this property. It feels like this can be proven more formally using real analysis.</p>
+<p><strong>Lemma:</strong> For all real numbers <span class="math inline">\(a, b\)</span> such that <span class="math inline">\(0 \leq a &lt; b \leq 1\)</span>, <span class="math inline">\(F_X(X) \sim \text{Uniform}(0, 1)\)</span>.</p>
+<p><strong>Informal mathematical argument</strong>:</p>
+<p>Let <span class="math inline">\(a, b\)</span> be real number such that <span class="math inline">\(0 \leq a &lt; b \leq 1\)</span>.</p>
+<p>By the argument above, we have <span class="math inline">\(F_X(b) - F_X(a) = b - a\)</span>.</p>
+<p>(Note that we can rewrite this as <span class="math inline">\(F(b) = b \text{ and } F(a) = a\)</span>, i.e.&nbsp;F is the identity.)</p>
+<p>We have:</p>
+<p><span class="math display">\[
+\begin{align}
+  F_Y(b) - F_Y(a) &amp;= b - a\\
+    &amp;= F_Y(Y) \Big|_a^b \text{    (standard antiderivative notation) }\\
+    &amp;= \int_a^b f_Y(y)dy \text{   (definition of a probability density function)}\\
+    &amp;= \int_a^b 1dy \text{    (a function with the identity as its antiderivative)}\\
+\end{align}
+\]</span></p>
+<p>So, we have <span class="math inline">\(f_Y(y) = 1\)</span>, and therefore, <span class="math inline">\(Y = F_X(x)\)</span> has the standard uniform distribution.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1698360203462" data-listing-reading-time-sort="0.765">
-<div class="thumbnail">
-<a href="./posts/what_is_statistics/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/what_is_statistics/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/what_is_statistics/index.html">
-<h3 class="no-anchor listing-title">
-What is Statistics?
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-This is a collection of various definitions of “statistics” and related terms.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/what_is_statistics/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="news,code,analysis" data-listing-date-sort="1690840800000" data-listing-file-modified-sort="1690923080022" data-listing-reading-time-sort="0.035">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html"> <img src="./posts/post-with-code/image.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/post-with-code/index.html">
-<h3 class="no-anchor listing-title">
-Post With Code
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<a href="./posts/post-with-code/index.html">
-<div class="listing-description">
-This is a post with executable code.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html">
-<div class="listing-date">
-Aug 1, 2023
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1690581600000" data-listing-file-modified-sort="1690923080022" data-listing-reading-time-sort="0.16">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <img src="./posts/welcome/thumbnail.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome To My Blog
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
-This is the first post in a Quarto blog. Welcome!
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
-<div class="listing-date">
-Jul 29, 2023
-</div>
-<div class="listing-author">
-Tristan O’Malley
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
