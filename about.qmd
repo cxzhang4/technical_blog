@@ -16,8 +16,6 @@ about:
 
 ---
 
-This blog contains:
+This blog contains explanations of technical concepts and opinions about education and work.
 
-- Explanations of technical concepts that can serve both as references and learning material for beginners.
 
-- Opinions about education and work.
