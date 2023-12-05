@@ -1,6 +1,6 @@
 ---
 title: "Intuition for the probability integral transform"
-description: "The probability integral transform states that, for a continuous random variable $X$, the distribution of $F_X(X)$ is $U(0, 1)$. I discuss why this makes sense."
+description: "The probability integral transform states that, for a continuous random variable $X$, the distribution of $Y = F_X(X)$ is $U(0, 1)$. I discuss why this makes sense."
 author: "Carson Zhang"
 date: "12/04/2023"
 draft: false
