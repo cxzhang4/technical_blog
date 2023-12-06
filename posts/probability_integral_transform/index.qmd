@@ -28,12 +28,10 @@ Let's try to draw the density of $Y$ one section at a time.
 
 First, suppose we select the top 3% of the distribution. [(This comprises the values between the $0.97$ and $1$ $p$-quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
 
-```{r echo=FALSE}
+```{r}
 quantile_0.97 <- qbeta(0.97, alpha_x, beta_x)
 quantile_1 <- 1
-```
 
-```{r echo=FALSE}
 plot(x_seq, x_density, type = "l", lty = 1,
      xlab = "X", ylab = "Density", main = "Density of X")
 abline(v = c(quantile_0.97, quantile_1), col = "orange")
