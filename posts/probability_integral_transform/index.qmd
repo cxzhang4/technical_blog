@@ -97,7 +97,7 @@ $$
 
 So, we have $f_Y(y) = 1$, and therefore, $Y = F_X(x)$ has the standard uniform distribution.
 
-## P-value distribution under H_0
+## P-value distribution under $H_0$
 
 The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is greater" is
 $P_{H_0}(T \geq t(x))$.
