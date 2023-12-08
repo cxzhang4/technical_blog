@@ -70,9 +70,9 @@ However, we note that all intervals have this same property (even arbitrarily sm
 
 It is natural for me to suspect the density of $Y$ to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
 
-For extra reading and formalism, we use the above insight to define the following lemma.
+For extra reading and formalism, we use the above insight to illustrate the theorem.
 
-**Lemma:** For all real numbers $a, b$ such that $0 \leq a < b \leq 1$, $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
+**Theorem:** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
 **Derivation of the density f_Y(Y)**[^1]: 
 
