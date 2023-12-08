@@ -74,7 +74,7 @@ We define the following lemma and "proof" that a random variable's CDF applied t
 
 **Lemma:** For all real numbers $a, b$ such that $0 \leq a < b \leq 1$, $F_X(X) \sim \text{Uniform}(0, 1)$.
 
-**Informal mathematical argument**:
+**Informal mathematical argument**[^1]: 
 
 Let $a, b$ be real number such that $0 \leq a < b \leq 1$.
 
@@ -111,3 +111,5 @@ P_{H_0}(T \geq t(x)) &= 1 - P_{H_0}(T \leq t(x))\\
 $$
 
 And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x)) \sim U(0, 1)$, and we have shown that p-values are uniformly distributed under the null hypothesis.
+
+[^1]: This feels like a circular argument to me, but I still think working through the algebra is instructive.
