@@ -72,9 +72,9 @@ It is natural for me to suspect the density of $Y$ to be a horizontal line at $1
 
 For extra reading and formalism, we use the above insight to illustrate the theorem.
 
-**Theorem:** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
+**Theorem (Probability Integral Transform):** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
-**Derivation of the density f_Y(Y)**[^1]: 
+**Derivation of the density $f_Y(Y)$**[^1]: 
 
 Let $a, b$ be real numbers such that $0 \leq a < b \leq 1$.
 
