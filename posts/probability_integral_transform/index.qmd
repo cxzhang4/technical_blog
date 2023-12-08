@@ -112,4 +112,4 @@ $$
 
 And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x)) \sim U(0, 1)$, and we have shown that p-values are uniformly distributed under the null hypothesis.
 
-[^1]: This feels like a circular argument to me, but I still think working through the algebra is instructive.
+[^1]: This feels like a circular argument to me, but I still think it's instructive to work through the steps.
