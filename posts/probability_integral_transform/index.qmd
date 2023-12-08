@@ -70,13 +70,13 @@ However, we note that all intervals have this same property (even arbitrarily sm
 
 It is natural for me to suspect the density of $Y$ to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
 
-We define the following lemma and "proof" that a random variable's CDF applied to itself has a standard uniform distribution.
+For extra reading and formalism, we use the above insight to define the following lemma.
 
-**Lemma:** For all real numbers $a, b$ such that $0 \leq a < b \leq 1$, $F_X(X) \sim \text{Uniform}(0, 1)$.
+**Lemma:** For all real numbers $a, b$ such that $0 \leq a < b \leq 1$, $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
-**Informal mathematical argument**[^1]: 
+**Derivation of the density f_Y(Y)**[^1]: 
 
-Let $a, b$ be real number such that $0 \leq a < b \leq 1$.
+Let $a, b$ be real numbers such that $0 \leq a < b \leq 1$.
 
 By the argument above, we have $F_Y(b) - F_Y(a) = b - a$.
 
@@ -112,4 +112,4 @@ $$
 
 And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x)) \sim U(0, 1)$, and we have shown that p-values are uniformly distributed under the null hypothesis.
 
-[^1]: This feels like a circular argument to me, but I still think it's instructive to work through the steps.
+[^1]: This feels like it could be a circular argument to me. It's also not entirely necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I still found it instructive to do work through these steps.
