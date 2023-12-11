@@ -95,6 +95,20 @@ $$
 
 So, we have $f_Y(y) = 1$, and therefore, $Y = F_X(x)$ has the standard uniform distribution.
 
+**Proof**:
+
+$$
+\begin{align}
+  F_Y(y) &= P(Y \leq y)\\
+    &= P(F_X(X) \leq y) && \text{(substituted the definition of } Y)\\
+    &= P(X \leq F_X^{-1}(y)) && \text{(applied } F_X^{-1} \text{ to both sides)}\\
+    &= F_X(F_X^{-1}(y)) && \text{(the definition of a CDF)}\\
+    &= y
+\end{align}
+$$
+
+Therefore, $Y \sim U(0, 1)$.
+
 ## P-value distribution under $H_0$
 
 The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is greater" is
