@@ -1,0 +1,15 @@
+---
+title: "P-values"
+description: "P-values are used widely and easily misinterpreted."
+author: "Carson Zhang"
+date: "12/10/2023"
+draft: true
+---
+
+In Null Hypothesis Significance Testing, a p-value is the probability under $H_0$ of observing a value of $t(x)$ (your test statistic) as or more extreme than the value that you did observe.
+
+Why should we use this to make decisions if it doesn't tell us the probability of $H_0$?
+
+It still sheds **some** light on the plausibility of the null hypothesis. If the data you observe is consistently very surprising under the null hypothesis, then you should question whether the null hypothesis is an accurate model of the world.
+
+If you have to make a decision, and this is the only probability that you **can** compute, then it feels reasonable to use a decision rule. How are you going to **not** do this?
