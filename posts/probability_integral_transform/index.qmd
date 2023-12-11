@@ -6,7 +6,7 @@ date: "12/04/2023"
 draft: false
 ---
 
-The probability integral transform states that, for a continuous random variable $X$, the distribution of $Y = F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. It is also central to why p-values are normally distributed under the null hypothesis. But why does this make sense?
+The probability integral transform states that, for a continuous random variable $X$, the distribution of $Y = F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. It is also central to why p-values are uniformly distributed under the null hypothesis. But why does this make sense?
 
 Suppose we have a random variable $X$ from an arbitrary probability distribution.
 
@@ -52,7 +52,7 @@ plot(cdf_seq, cdf_arbitrary_guess, type = "l",
 abline(v = c(0.97, 1), col = "orange")
 ```
 
-However, since we selected the top 3% of the probability mass, we know that, within the orange interval, the area under the curve must be $0.03$, and therefore the value of the density must be $1$ on average.
+However, recall that we selected the top 3% of the probability mass, so within the orange interval, the area under the curve must be $0.03$, and therefore the value of the density must be $1$ on average within the orange interval.
 
 ```{r echo=FALSE}
 cdf_seq_orange <- seq(0.97, 1, by = 0.0001)
