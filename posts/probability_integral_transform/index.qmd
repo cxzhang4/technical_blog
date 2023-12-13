@@ -24,7 +24,7 @@ plot(x_seq, x_density, type = "l", lty = 1,
 
 What does $Y = F_X(x)$ look like?
 
-Let's try to draw the density of $Y$ one section at a time.
+Let's try to draw the pdf of $Y$ one section at a time.
 
 First, suppose we select the top 3% of the distribution. [(This comprises the values between the $0.97$ and $1$ $p$-quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
 
@@ -52,7 +52,7 @@ plot(cdf_seq, cdf_arbitrary_guess, type = "l",
 abline(v = c(0.97, 1), col = "orange")
 ```
 
-However, recall that we selected the top 3% of the probability mass, so within the orange interval, the area under the curve must be $0.03$, and therefore the value of the density must be $1$ on average within the orange interval.
+However, recall that we selected the top 3% of the probability mass, so within the orange interval, the area under the curve must be $0.03$, and therefore the value of the pdf must be $1$ on average within the orange interval.
 
 ```{r echo=FALSE}
 cdf_seq_orange <- seq(0.97, 1, by = 0.0001)
@@ -66,15 +66,15 @@ abline(v = c(0.97, 1), col = "orange")
 
 Now, think about the region between the $0.97$ and $0.98$ $p$-quantiles of the distribution By definition, this comprises 1% of the probability mass ($0.98 - 0.97 = 0.01$), so we need to adjust our curve to satisfy this condition.
 
-However, we note that all intervals have this same property (even arbitrarily small intervals): **the width of each interval is equal to its corresponding probability mass.** So, the density of $Y$ needs to have mean $1$ over any sub-interval of $[0, 1]$.
+However, we note that all intervals have this same property (even arbitrarily small intervals): **the width of each interval is equal to its corresponding probability mass.** So, the pdf of $Y$ needs to have mean $1$ over any sub-interval of $[0, 1]$.
 
-It is natural for me to suspect the density of $Y$ to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
+It is natural for me to suspect the pdf of $Y$ to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
 
 For extra reading and formalism, we use the above insight to illustrate the theorem.
 
 **Theorem (Probability Integral Transform):** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
-**Derivation of the density $f_Y(Y)$**[^1]: 
+**Derivation of the pdf $f_Y(Y)$**[^1]: A "proof" that the pdf of $Y = F_X(X)$ is $1$, starting from the insight given above.
 
 Let $a, b$ be real numbers such that $0 \leq a < b \leq 1$.
 
@@ -95,7 +95,7 @@ $$
 
 So, we have $f_Y(y) = 1$, and therefore, $Y = F_X(x)$ has the standard uniform distribution.
 
-**Proof**:
+**Proof**: the standard proof of the PIT.
 
 $$
 \begin{align}
@@ -119,11 +119,12 @@ We can write
 $$
 \begin{align}
 P_{H_0}(T \geq t(x)) &= 1 - P_{H_0}(T \leq t(x))\\
-  &= 1 - F_{T; H_0}(T)\\
-  &= 1 - Y && \text{where } Y \sim U(0, 1)\\
+  &= 1 - F_{T; H_0}(T)\\    
 \end{align}
 $$
 
-And we know $1 - Y \sim U(0, 1)$, so $P_{H_0}(T \geq t(x)) \sim U(0, 1)$, and we have shown that p-values are uniformly distributed under the null hypothesis.
+And since $F_{T; H_0}(T)$ is a random variable's CDF applied to itself, its distribution is standard uniform by the probability integral transform. Therefore, $1 - F_{T; H_0}(T) \sim U(0, 1)$, and we have shown that p-values are uniformly distributed under the null hypothesis.
 
-[^1]: This feels like it could be a circular argument to me. It's also not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I still found it instructive to work through these steps.
+## Appendix
+
+[^1]: This is not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I still found it instructive to work through these steps.
