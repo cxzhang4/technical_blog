@@ -127,10 +127,6 @@ $$
 
 Since $F_{T; H_0}(T)$ is a random variable's CDF applied to itself, its distribution is standard uniform by the probability integral transform. Therefore, $1 - F_{T; H_0}(T) \sim U(0, 1)$, and we have shown that p-values are uniformly distributed under the null hypothesis.[^2]
 
-## References
-
-
-
 ## Acknowledgements
 
 Thank you to Meimingwei Li, Raphael Rehms, Prof. Michael Schomaker, and J.P. Weideman for their helpful input.
