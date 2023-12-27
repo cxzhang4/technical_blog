@@ -131,9 +131,6 @@ Since $F_{T; H_0}(T)$ is a random variable's CDF applied to itself, its distribu
 
 Thank you to Meimingwei Li, Raphael Rehms, Prof. Michael Schomaker, and J.P. Weideman for their helpful input.
 
-## Appendix
-
-There is a distinction between divergence and decision p-values. 
 
 [^1]: This is not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I'm also not entirely convinced that this is a rigorous derivation. I still found it instructive to work through these steps.
 
