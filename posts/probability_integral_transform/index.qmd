@@ -118,7 +118,7 @@ We can write
 
 $$
 \begin{align}
-P_{H_0}(T \leq t(x)) &= F_{T; H_0}(t(x))\\
+P_{H_0}(T \leq t(x)) &= F_{T; H_0}(T)\\
   &= F_{U(0, 1)} && \text{(probability integral transform)}
 \end{align}
 $$
@@ -129,7 +129,7 @@ The "greater than" alternative:
 $$
 \begin{align}
 P_{H_0}(T \geq t(x)) &= 1 - P_{H_0}(T \leq t(x))\\
-  &= 1 - F_{T; H_0}(t(x))\\    
+  &= 1 - F_{T; H_0}(T)\\    
   &= 1 - F_{U(0, 1)} && \text{(probability integral transform)}\\
   &= F_{U(0, 1)}
 \end{align}
