@@ -109,41 +109,54 @@ $$
 
 Therefore, $Y \sim U(0, 1)$.
 
-## P-value distribution under $H_0$ (Under construction)
+## P-value distribution under $H_0$
 
 The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is less than" is
 $P_{H_0}(T \leq t(x))$.
 
-Define $P := \Pr_{H_0}(T \leq t(x)) = F_{T; H_0}(t(x)) := F_T($.
+Define $P_{less} := \Pr_{H_0}(T \leq t(x)) = F_{T; H_0}(T)$.
 
 We can write
 
 $$
 \begin{align}
-F_P(P) &= F_{T; H_0}(T)\\
-  &= F_{U(0, 1)} && \text{(probability integral transform)}
-\end{align}
-$$
-Since $F_{T; H_0}(T)$ is a random variable's CDF applied to itself, its distribution is standard uniform by the probability integral transform.
-
-The "greater than" alternative:
-
-$$
-\begin{align}
-P_{H_0}(T \geq t(x)) &= 1 - P_{H_0}(T \leq t(x))\\
-  &= 1 - F_{T; H_0}(T)\\    
-  &= 1 - F_{U(0, 1)} && \text{(probability integral transform)}\\
+F_{P_{less}}(p) &= \Pr(P_{less} \leq p)\\
+  &= \Pr(F_{T; H_0}(T) \leq p)\\
+  &= \Pr(T \leq F_{T; H_0}^{-1}(p))\\
+  &= F_{T; H_0}(F_{T; H_0}^{-1}(p))\\
+  &= p\\
   &= F_{U(0, 1)}
 \end{align}
 $$
 
-Therefore, we have shown that one-sided p-values are uniformly distributed under the null hypothesis.[^2]
+The "greater than" alternative:
+
+Define $P_{greater} := \Pr_{H_0}(T \geq t(x)) = 1 - F_{T; H_0}(T)$.
+
+
+$$
+\begin{align}
+F_{P_{greater}} &= \Pr(P_{greater} \leq p)\\
+  &= \Pr(1 - F_{T; H_0}(T) \leq p)\\
+  &= \Pr(-F_{T; H_0}(T) \leq p - 1)\\
+  &= \Pr(F_{T; H_0}(T) \geq 1 - p)\\
+  &= 1 - \Pr(F_{T; H_0}(T) \leq 1 - p)\\
+  &= 1 - \Pr(T \leq F_{T; H_0}^{-1}(1 - p))\\
+  &= 1 - F_{T; H_0}(F_{T; H_0}^{-1}(1 - p))\\
+  &= 1 - (1 - p)\\
+  &= p\\
+  &= F_{U(0, 1)}
+\end{align}
+$$
+
+Therefore, we have shown that one-sided p-values are uniformly distributed under the null hypothesis.[^3]
 
 ## Acknowledgements
 
 Thank you to Meimingwei Li, Raphael Rehms, Prof. Michael Schomaker, and J.P. Weideman for their helpful input.
 
+[^1]: This is not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I'm also not convinced that this is a rigorous derivation. I still found it instructive to work through these steps.
 
-[^1]: This is not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I'm also not entirely convinced that this is a rigorous derivation. I still found it instructive to work through these steps.
+[^2]: Notation and "less than" proof from Raphael Rehms's exercise and solution from the Statistical Methods in Epidemiology course.
 
-[^2]: [This holds only for divergence p-values, not decision p-values](https://arxiv.org/abs/2301.02478). My understanding is that divergence p-values are exactly one-sided p-values. Thanks again to Prof. Schomaker for this insight, and for bringing this to my attention.
+[^3]: [This holds only for divergence p-values, not decision p-values](https://arxiv.org/abs/2301.02478). My understanding is that divergence p-values are exactly one-sided p-values. Thanks again to Prof. Schomaker for this insight.
