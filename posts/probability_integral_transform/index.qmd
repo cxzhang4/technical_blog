@@ -137,10 +137,10 @@ Define $P_{greater} := \Pr_{H_0}(T \geq t(x)) = 1 - F_{T; H_0}(T)$.
 $$
 \begin{align}
 F_{P_{greater}} &= \Pr(P_{greater} \leq p)\\
-  &= \Pr(1 - F_{T; H_0}(T) \leq p)\\
-  &= \Pr(-F_{T; H_0}(T) \leq p - 1)\\
-  &= \Pr(F_{T; H_0}(T) \geq 1 - p)\\
-  &= 1 - \Pr(F_{T; H_0}(T) \leq 1 - p)\\
+  &= \Pr((1 - F_{T; H_0}(T)) \leq p)\\
+  &= \Pr(-F_{T; H_0}(T) \leq (p - 1))\\
+  &= \Pr(F_{T; H_0}(T) \geq (1 - p))\\
+  &= 1 - \Pr(F_{T; H_0}(T) \leq (1 - p))\\
   &= 1 - \Pr(T \leq F_{T; H_0}^{-1}(1 - p))\\
   &= 1 - F_{T; H_0}(F_{T; H_0}^{-1}(1 - p))\\
   &= 1 - (1 - p)\\
