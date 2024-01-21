@@ -109,7 +109,7 @@ $$
 
 Therefore, $Y \sim U(0, 1)$.
 
-## P-value distribution under $H_0$
+## P-value distribution under $H_0$ [^2]
 
 The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is less than" is
 $P_{H_0}(T \leq t(x))$.
