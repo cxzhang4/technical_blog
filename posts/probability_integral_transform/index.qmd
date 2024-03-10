@@ -111,32 +111,15 @@ Therefore, $Y \sim U(0, 1)$.
 
 ## P-value distribution under $H_0$ [^2]
 
-The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is less than" is
-$P_{H_0}(T \leq t(x))$.
-
-Define $P_{less} := \Pr_{H_0}(T \leq t(x)) = F_{T; H_0}(T)$.
-
-We can write
-
-$$
-\begin{align}
-F_{P_{less}}(p) &= \Pr(P_{less} \leq p)\\
-  &= \Pr(F_{T; H_0}(T) \leq p)\\
-  &= \Pr(T \leq F_{T; H_0}^{-1}(p))\\
-  &= F_{T; H_0}(F_{T; H_0}^{-1}(p))\\
-  &= p\\
-  &= F_{U(0, 1)}
-\end{align}
-$$
-
-The "greater than" alternative:
+The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is greater than" is
+$P_{H_0}(T \geq t(x))$.
 
 Define $P_{greater} := \Pr_{H_0}(T \geq t(x)) = 1 - F_{T; H_0}(T)$.
 
 
 $$
 \begin{align}
-F_{P_{greater}} &= \Pr(P_{greater} \leq p)\\
+F_{P_{\text{greater}}} &= \Pr(P_{greater} \leq p)\\
   &= \Pr((1 - F_{T; H_0}(T)) \leq p)\\
   &= \Pr(-F_{T; H_0}(T) \leq (p - 1))\\
   &= \Pr(F_{T; H_0}(T) \geq (1 - p))\\
