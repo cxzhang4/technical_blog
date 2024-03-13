@@ -12,7 +12,7 @@ website:
         href: https://www.carsonzhang.com
 format:
   html:
-    theme: lumen
+    theme: flatly
     css: styles.css
 
 execute:
