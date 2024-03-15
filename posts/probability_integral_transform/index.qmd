@@ -119,13 +119,13 @@ Define $P_{greater} := \Pr_{H_0}(T \geq t(x)) = 1 - F_{T; H_0}(T)$.
 
 $$
 \begin{align}
-F_{P_{\text{greater}}} &= \Pr(P_{greater} \leq p)\\
+F_{P_{\text{greater}}} &= \Pr(P_{greater} \leq p) && \text{(definition of a CDF)}\\
   &= \Pr((1 - F_{T; H_0}(T)) \leq p)\\
   &= \Pr(-F_{T; H_0}(T) \leq (p - 1))\\
   &= \Pr(F_{T; H_0}(T) \geq (1 - p))\\
   &= 1 - \Pr(F_{T; H_0}(T) \leq (1 - p))\\
-  &= 1 - \Pr(T \leq F_{T; H_0}^{-1}(1 - p))\\
-  &= 1 - F_{T; H_0}(F_{T; H_0}^{-1}(1 - p))\\
+  &= 1 - \Pr(T \leq F_{T; H_0}^{-1}(1 - p)) && \text{(applied } F_X^{-1} \text{ to both sides)}\\
+  &= 1 - F_{T; H_0}(F_{T; H_0}^{-1}(1 - p)) && \text{(definition of a CDF)}\\
   &= 1 - (1 - p)\\
   &= p\\
   &= F_{U(0, 1)}
