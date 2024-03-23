@@ -132,7 +132,7 @@ F_{P_{\text{greater}}} &= \Pr(P_{greater} \leq p) && \text{(definition of a CDF)
 \end{align}
 $$
 
-Therefore, we have shown that one-sided p-values are uniformly distributed under the null hypothesis.[^3]
+Thus, we have shown that one-sided p-values are uniformly distributed under the null hypothesis.[^3]
 
 ## Acknowledgements
 
@@ -140,6 +140,6 @@ Thank you to Meimingwei Li, Raphael Rehms, Prof. Michael Schomaker, and J.P. Wei
 
 [^1]: This is not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I'm also not convinced that this is a rigorous derivation. I still found it instructive to work through these steps.
 
-[^2]: Notation and "less than" proof from Raphael Rehms's exercise and solution from the Statistical Methods in Epidemiology course.
+[^2]: Notation and proof from and inspired by Raphael Rehms's exercise and solution from the Statistical Methods in Epidemiology course.
 
 [^3]: [This holds only for divergence p-values, not decision p-values](https://arxiv.org/abs/2301.02478). My understanding is that divergence p-values are exactly one-sided p-values. Thanks to Prof. Schomaker for this insight.
