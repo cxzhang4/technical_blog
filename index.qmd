@@ -1,5 +1,5 @@
 ---
-title: "Carson Zhang"
+title: "Carson's Noisy Channel"
 listing:
   contents: posts
   sort: "date desc"
