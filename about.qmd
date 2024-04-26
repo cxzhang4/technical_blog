@@ -1,5 +1,5 @@
 ---
-title: "Carson Zhang"
+title: "About Me"
 image: profile.jpg
 about:
   template: jolla
@@ -12,3 +12,7 @@ about:
       href: https://github.com
 
 ---
+
+I'm a Master's student in Statistics and Data Science at LMU Munich. [My professional interests](https://carsonzhang.com/statement_of_interests) are some combination of statistics and computer science.
+
+This blog draws a lot of inspiration from [Gregory Gundersen's blog](https://gregorygundersen.com/blog/).
