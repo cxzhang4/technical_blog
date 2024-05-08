@@ -13,6 +13,8 @@ about:
 
 ---
 
-I'm a master's student in Statistics and Data Science at LMU Munich. [My professional interests](https://carsonzhang.com/statement_of_interests) are some combination of statistics and computer science.
+I'm a master's student in Statistics and Data Science at LMU Munich. [My professional interests](https://carsonzhang.com/statement_of_interests) are some combination of statistics and computer science, and I strive to live up equally to the labels of statistician and computer scientist.
+
+I am a firm believer that all communication is noisy, but I strive to be as clear as possible here. The name of this blog is also a nod to the field of information theory.
 
 This blog draws a lot of inspiration from [Gregory Gundersen's blog](https://gregorygundersen.com/blog/).
