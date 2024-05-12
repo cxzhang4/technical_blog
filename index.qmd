@@ -1,5 +1,5 @@
 ---
-title: "Carson's Noisy Channel"
+title: "Carson's Blog"
 listing:
   contents: posts
   sort: "date desc"
