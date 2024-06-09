@@ -6,7 +6,7 @@ date: "12/04/2023"
 draft: false
 ---
 
-The probability integral transform states that, for a continuous random variable $X$, the distribution of $Y = F_X(X)$ is $U(0, 1)$. This result underlies inverse transform sampling. It illustrates why p-values are uniformly distributed under the null hypothesis. It is central to how copulas can model joint distributions. But why does this make sense?
+The probability integral transform states that, for a continuous random variable $X$, the distribution of $Y = F_X(X)$ is $\text{Uniform}(0, 1)$. This result underlies inverse transform sampling. It illustrates why p-values are uniformly distributed under the null hypothesis. It is central to how copulas can model joint distributions. But why does this make sense?
 
 Suppose we have a random variable $X$ from an arbitrary probability distribution.
 
@@ -125,7 +125,7 @@ $$
 \end{align}
 $$
 
-Therefore, $Y \sim U(0, 1)$.
+Therefore, $Y \sim \text{Uniform}(0, 1)$.
 
 ## P-value distribution under $H_0$ [^2]
 
