@@ -10,9 +10,9 @@ The probability integral transform states that, for a continuous random variable
 
 Suppose we have a random variable $X$ from an arbitrary probability distribution.
 
-Here, $X \sim \text{Beta}(\alpha = 0.9, \beta = 3.4)$
+<!-- Here, $X \sim \text{Beta}(\alpha = 0.9, \beta = 3.4)$ -->
 
-```{r}
+```{r include = FALSE}
 alpha_x = 0.9
 beta_x = 3.4
 x_seq <- seq(0, 1, length = 100)
@@ -26,7 +26,7 @@ What does $Y = F_X(x)$ look like?
 
 Let's try to draw the pdf of $Y$ one section at a time.
 
-First, suppose we select the top 3% of the distribution. [(This comprises the values between the $0.97$ and $1$ $p$-quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
+First, suppose we select the top 3% of the distribution. [(This comprises the values between the $0.97$ and $1$ -quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
 
 ```{r}
 quantile_0.97 <- qbeta(0.97, alpha_x, beta_x)
@@ -64,13 +64,31 @@ abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
 abline(v = c(0.97, 1), col = "orange")
 ```
 
-Now, think about the region between the $0.97$ and $0.98$ $p$-quantiles of the distribution. By definition, this comprises 1% of the probability mass ($0.98 - 0.97 = 0.01$), so we need to adjust our curve to satisfy this condition.
+Now, think about the region between the $0.97$ and $0.98$-quantiles of the distribution. By definition, this comprises 1% of the probability mass ($0.98 - 0.97 = 0.01$), so we need to adjust our curve to satisfy this condition.
 
-However, we note that all intervals have this same property (even arbitrarily small intervals): **the width of each interval is equal to its corresponding probability mass.** So, the pdf of $Y$ needs to have mean $1$ over any sub-interval of $[0, 1]$.
+```{r echo=FALSE}
+cdf_density_known = rep(1, times = length(cdf_seq_orange))
+plot(cdf_seq_orange, cdf_density_known, type = "l", xlim = c(0, 1), ylim = c(0, 1.5), lwd = 2.5,
+     main = "The top 3% of the unknown density of Y", xlab = "Value of the CDF of X", ylab = "Density")
+abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
+abline(v = c(0.97, 1), col = "orange")
+# abline(h = mean(cdf_density_orange), xmin = 0.97, xmax = 1)
+```
+
+However, we note that all intervals have this same property (even arbitrarily small intervals): **the width of each interval is equal to its corresponding probability mass.** So, the pdf of $Y$ needs to have mean $1$ over any sub-interval of $[0, 1]$, no matter its size or location.
+
+```{r echo=FALSE}
+plot(cdf_seq_orange, cdf_density_known, type = "l", xlim = c(0, 1), ylim = c(0, 1.5), lwd = 2.5,
+     main = "Some more parts of the density of Y", xlab = "Value of the CDF of X", ylab = "Density")
+segments(0.2, 1, 0.47, 1, lwd = 2.5)
+segments(0.6, 1, 0.605, 1, lwd = 2.5)
+abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
+abline(v = c(0.97, 1), col = "orange")
+```
 
 It is natural for me to suspect the pdf of $Y$ to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
 
-For extra reading and formalism, we use the above insight to illustrate the theorem.
+We use the above insight to illustrate the theorem.
 
 **Theorem (Probability Integral Transform):** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
@@ -80,7 +98,7 @@ Let $a, b$ be real numbers such that $0 \leq a < b \leq 1$.
 
 By the argument above, we have $F_Y(b) - F_Y(a) = b - a$.
 
-(Note that we can rewrite this as $F(b) = b \text{ and } F(a) = a$, i.e. $F$ is the identity.)
+(We will rewrite this statement as $F(b) = b \text{ and } F(a) = a$, i.e. $F$ is the identity.)
 
 We have:
 
