@@ -158,4 +158,4 @@ Thank you to Meimingwei Li, Raphael Rehms, Prof. Michael Schomaker, and J.P. Wei
 
 [^2]: Notation and proof from and inspired by Raphael Rehms's exercise and solution from the Statistical Methods in Epidemiology course.
 
-[^3]: [This holds only for divergence p-values, not decision p-values](https://arxiv.org/abs/2301.02478). My understanding is that divergence p-values are exactly one-sided p-values. Thanks to Prof. Schomaker for this insight.
+[^3]: [This holds only for divergence p-values, not decision p-values](https://arxiv.org/abs/2301.02478). My understanding is that divergence p-values are one-sided p-values. Thanks to Prof. Schomaker for this insight.
