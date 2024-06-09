@@ -90,7 +90,7 @@ We use the above insight to illustrate the theorem.
 
 **Theorem (Probability Integral Transform):** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
-**Derivation of the pdf $f_Y(Y)$**[^1]: A "proof" that the pdf of $Y = F_X(X)$ is $1$, starting from the insight given above.
+**1. Derivation of the pdf $f_Y(Y)$**[^1]: A "proof" that the pdf of $Y = F_X(X)$ is $1$, starting from the insight given above.
 
 Let $a, b$ be real numbers such that $0 \leq a < b \leq 1$.
 
@@ -111,7 +111,7 @@ $$
 
 So, we have $f_Y(y) = 1$, and therefore, $Y = F_X(x)$ has the standard uniform distribution.
 
-**Proof**: the standard proof of the PIT found on the [Wikipedia page](https://en.wikipedia.org/wiki/Probability_integral_transform).
+**2. Proof**: the standard proof of the PIT found on the [Wikipedia page](https://en.wikipedia.org/wiki/Probability_integral_transform).
 
 $$
 \begin{align}
