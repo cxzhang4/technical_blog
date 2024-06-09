@@ -10,8 +10,6 @@ The probability integral transform states that, for a continuous random variable
 
 Suppose we have a random variable $X$ from an arbitrary probability distribution.
 
-<!-- Here, $X \sim \text{Beta}(\alpha = 0.9, \beta = 3.4)$ -->
-
 ```{r include = FALSE}
 alpha_x = 0.9
 beta_x = 3.4
