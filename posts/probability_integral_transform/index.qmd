@@ -10,7 +10,7 @@ The probability integral transform states that, for a continuous random variable
 
 Suppose we have a random variable $X$ from an arbitrary probability distribution.
 
-```{r include = FALSE}
+```{r echo = FALSE}
 alpha_x = 0.9
 beta_x = 3.4
 x_seq <- seq(0, 1, length = 100)
@@ -26,7 +26,7 @@ Let's try to draw the pdf of $Y$ one section at a time.
 
 First, suppose we select the top 3% of the distribution, [(i.e. values between the $0.97$ and $1$ -quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
 
-```{r}
+```{r echo = FALSE}
 quantile_0.97 <- qbeta(0.97, alpha_x, beta_x)
 quantile_1 <- 1
 
