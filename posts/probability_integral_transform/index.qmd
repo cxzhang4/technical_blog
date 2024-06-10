@@ -81,7 +81,6 @@ plot(cdf_seq_orange, cdf_density_known, type = "l", xlim = c(0, 1), ylim = c(0, 
 segments(0.2, 1, 0.47, 1, lwd = 2.5)
 segments(0.6, 1, 0.605, 1, lwd = 2.5)
 abline(h = mean(cdf_density_orange), col = "orange", lty = "dashed")
-abline(v = c(0.97, 1), col = "orange")
 ```
 
 It is natural for me to suspect the pdf of $Y$ to be a horizontal line at $1$: this is the only function I can think of that guarantees this property.
