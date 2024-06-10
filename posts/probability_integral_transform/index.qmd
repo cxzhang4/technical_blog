@@ -24,7 +24,7 @@ What does $Y = F_X(x)$ look like?
 
 Let's try to draw the pdf of $Y$ one section at a time.
 
-First, suppose we select the top 3% of the distribution. [(This comprises the values between the $0.97$ and $1$ -quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
+First, suppose we select the top 3% of the distribution, [(i.e. values between the $0.97$ and $1$ -quantiles of this distribution.)](https://en.wikipedia.org/wiki/Quantile)
 
 ```{r}
 quantile_0.97 <- qbeta(0.97, alpha_x, beta_x)
