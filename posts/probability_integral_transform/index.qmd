@@ -89,10 +89,9 @@ We use the above insight to illustrate the theorem.
 
 
 
-### Theorem (Probability Integral Transform)
-$Y = F_X(X) \sim \text{Uniform}(0, 1)$.
+**Theorem (Probability Integral Transform):** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
-#### Proof: the standard proof of the PIT found on the [Wikipedia page](https://en.wikipedia.org/wiki/Probability_integral_transform).
+**Proof**: the standard proof of the PIT found on the [Wikipedia page](https://en.wikipedia.org/wiki/Probability_integral_transform).
 
 $$
 \begin{align}
