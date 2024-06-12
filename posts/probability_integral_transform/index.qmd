@@ -127,7 +127,7 @@ Therefore, $Y \sim \text{Uniform}(0, 1)$.
 ## P-value distribution under $H_0$ [^2]
 
 The p-value of a test statistic $T(X)$ for a one-sided test where the alternative "is greater than" is
-$P_{H_0}(T \geq t(x))$.
+$P_{H_0}(T \geq t(x))$. We can already see that this looks like a CDF (the "less than" alternative really is just a CDF), so our above insights will hold.
 
 Define $P_{greater} := \Pr_{H_0}(T \geq t(x)) = 1 - F_{T; H_0}(T)$.
 
