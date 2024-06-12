@@ -89,28 +89,7 @@ We use the above insight to illustrate the theorem.
 
 **Theorem (Probability Integral Transform):** $Y = F_X(X) \sim \text{Uniform}(0, 1)$.
 
-**1. Derivation of the pdf $f_Y(Y)$**[^1]: A "proof" that the pdf of $Y = F_X(X)$ is $1$, starting from the insight given above.
-
-Let $a, b$ be real numbers such that $0 \leq a < b \leq 1$.
-
-By the argument above, we have $F_Y(b) - F_Y(a) = b - a$.
-
-(We will rewrite this statement as $F(b) = b \text{ and } F(a) = a$, i.e. $F$ is the identity.)
-
-We have:
-
-$$
-\begin{align}
-  b - a &= F_Y(b) - F_Y(a)\\
-    &= F_Y(Y) \Big|_a^b && \text{(standard antiderivative notation)}\\
-    &= \int_a^b f_Y(y)dy && \text{(definition of a probability density function)}\\
-    &= \int_a^b 1dy && \text{(a function with the identity as its antiderivative)}\\
-\end{align}
-$$
-
-So, we have $f_Y(y) = 1$, and therefore, $Y = F_X(x)$ has the standard uniform distribution.
-
-**2. Proof**: the standard proof of the PIT found on the [Wikipedia page](https://en.wikipedia.org/wiki/Probability_integral_transform).
+**Proof**: the standard proof of the PIT found on the [Wikipedia page](https://en.wikipedia.org/wiki/Probability_integral_transform).
 
 $$
 \begin{align}
@@ -134,7 +113,7 @@ Define $P_{greater} := \Pr_{H_0}(T \geq t(x)) = 1 - F_{T; H_0}(T)$.
 
 $$
 \begin{align}
-F_{P_{\text{greater}}} &= \Pr(P_{greater} \leq p) && \text{(definition of a CDF)}\\
+F_{P_{\text{greater}}}(p) &= \Pr(P_{greater} \leq p) && \text{(definition of a CDF)}\\
   &= \Pr((1 - F_{T; H_0}(T)) \leq p)\\
   &= \Pr(-F_{T; H_0}(T) \leq (p - 1))\\
   &= \Pr(F_{T; H_0}(T) \geq (1 - p))\\
@@ -143,7 +122,7 @@ F_{P_{\text{greater}}} &= \Pr(P_{greater} \leq p) && \text{(definition of a CDF)
   &= 1 - F_{T; H_0}(F_{T; H_0}^{-1}(1 - p)) && \text{(definition of a CDF)}\\
   &= 1 - (1 - p)\\
   &= p\\
-  &= F_{U(0, 1)}
+  &= F_{U(0, 1)}(p)
 \end{align}
 $$
 
@@ -151,7 +130,7 @@ Thus, we have shown that one-sided p-values are uniformly distributed under the 
 
 ## Acknowledgements
 
-Thank you to Meimingwei Li, Raphael Rehms, Prof. Michael Schomaker, and J.P. Weideman for their helpful input.
+Thank you to Meimingwei Li, Raphael Rehms, Dr. Fabian Scheipl, Prof. Michael Schomaker, and J.P. Weideman for their helpful input.
 
 [^1]: This is not necessary: once we know $F_Y(Y)$, we know the distribution of $Y$. I'm also not convinced that this is a rigorous derivation. I still found it instructive to work through these steps.
 
