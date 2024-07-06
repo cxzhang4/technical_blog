@@ -1,0 +1,12 @@
+---
+title: "Copulas"
+description: "I describe the ideas underlying copulas."
+author: "Carson Zhang"
+date: "07/06/2024"
+draft: false
+format: revealjs
+---
+
+## Copulas
+
+## Sklar's Theorem
