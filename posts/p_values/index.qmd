@@ -3,7 +3,7 @@ title: "Intuition for the p-value"
 description: "P-values can seem strange. I provide some intuition for why they make sense in the context of null-hypothesis significance testing."
 author: "Carson Zhang"
 date: "01/18/2026"
-draft: false
+draft: true
 ---
 
 ```{r}
